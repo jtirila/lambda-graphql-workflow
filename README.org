@@ -2,13 +2,13 @@
 
 This repository is just a playground for experimenting with different ways of working with the following tools: 
 
-- AWS Lambdas (Python; optional if possible to skip)
+- AWS Lambdas (Python)
 - A GraphQL API
   - AppSync probably plays a role here
 - It seems like Amplify will be useful
 - Emacs org-babel and literate programming
 
-The ultimate aim is to use the knowledge to build a serverless GraphQL API using a minimum viable set of tools from AWS.
+The ultimate aim is to use the knowledge to build a serverless GraphQL API using a minimum viable set of tools from AWS. Which ones exactly are necessary remains to be seen, and the pros and cons of including any candidate component will be evaluated in this repository and related experiments.
 
 However, this repo will not host the final solution, but rather just document some of the learning.
 
@@ -19,10 +19,16 @@ https://aws.amazon.com/blogs/mobile/amplify-framework-local-mocking/
 ** Building a Build Pipeline to Deploy the Solution to AWS
 It seems likely that Amplify will help with this too.
 ** Choosing a Way to run and Access the GraphQL Endpoint
-FIXME: I have seen tutorials where people use different stacks of Python web frameworks, even on AWS Lambda. The aim here is to identify a sort of MVP for running this solution as I suspect there is no need for a web framework in the Serverless context. I will try to avoid bloat / unnecessary components, and just rely on things that are strictly needed for the API. 
+I have seen tutorials where people use different stacks of Python web frameworks, even on AWS Lambda. The aim here is to identify a sort of MVP for running this solution as I suspect there is no need for a web framework in the Serverless context. I will try to avoid bloat / unnecessary components, and just rely on things that are strictly needed for the API. 
 
 My current understanding is that ideally there is no need for any sort of web framework.
 
 Right now, I don't even know if Lambdas will be necessary. If they are, one possible way to enable interaction between Lambdas and Appsync is to use the boto3 client library. 
 
 However, it may be possible and feasible to access the GraphQL endpoint directly from a web client (JS code).
+
+* The First Experiment: Amplify & Local Development Tools
+
+(This is heavily WIP.)
+
+So as a first attempt, I will use Amplify for building the GraphQL Backend, and then just use Amplify's built-in tools for playing with the API.
