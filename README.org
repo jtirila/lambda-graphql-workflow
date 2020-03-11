@@ -4,7 +4,7 @@ This repository is just a playground for experimenting with different ways of wo
 
 - AWS Lambdas (Python)
 - A GraphQL API
-- Emacs org-bable and literate programming
+- Emacs org-babel and literate programming
 
 The ultimate aim is to use the knowledge to build a serverless API using Lambdas, a suitable AWS database, and related tools.
 
