@@ -1,0 +1,11 @@
+* Lambda & GrapQL Workflows
+
+This repository is just a playground for experimenting with different ways of working with the following tools: 
+
+- AWS Lambdas (Python)
+- A GraphQL API
+- Emacs org-bable and literate programming
+
+The ultimate aim is to use the knowledge to build a serverless API using Lambdas, a suitable AWS database, and related tools.
+
+However, this repo will not host the final solution, but rather just document some of the learning.
