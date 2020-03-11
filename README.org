@@ -9,3 +9,14 @@ This repository is just a playground for experimenting with different ways of wo
 The ultimate aim is to use the knowledge to build a serverless API using Lambdas, a suitable AWS database, and related tools.
 
 However, this repo will not host the final solution, but rather just document some of the learning.
+
+* A Partial List of Topics to Cover
+** Building a Local Development Environment
+For contingent reasons, I am looking for a solution where a maximal amount of work can be done locally, without access to AWS or even Internet. 
+*** Running the Lambdas and Structuring the Code
+This means that ideally I should be able to run the Lambdas locally.
+
+Alternatively / additionally, I will try to isolate the functionality of the lambdas into well-defined modules that can be run and tested in isolation, without the need for the AWS infrastructure. 
+*** Accessing a Database
+FIXME: Need to be able to use a local database. Switching between the local enviroment and AWS: ideally just a different database configuration file / section.
+** Building a Build Pipeline to Deploy the Solution to AWS
