@@ -5,6 +5,7 @@ This repository is just a playground for experimenting with different ways of wo
 - AWS Lambdas (Python; optional if possible to skip)
 - A GraphQL API
   - AppSync probably plays a role here
+- It seems like Amplify will be useful
 - Emacs org-babel and literate programming
 
 The ultimate aim is to use the knowledge to build a serverless GraphQL API using a minimum viable set of tools from AWS.
@@ -13,19 +14,15 @@ However, this repo will not host the final solution, but rather just document so
 
 * A Partial List of Topics to Cover
 ** Building a Local Development Environment
-For contingent reasons, I am looking for a solution where a maximal amount of work can be done locally, without access to AWS or even Internet. 
-*** Running the Lambdas and Structuring the Code
-Ideally, if there are Lambdas involved, I should be able to run them locally.
-
-Alternatively / additionally, I will try to isolate the functionality of the lambdas into well-defined modules that can be run and tested in isolation, without the need for the AWS infrastructure. 
-*** Accessing a Database
-FIXME: Need to be able to use a local database. Switching between the local enviroment and AWS: ideally just a different database configuration file / section.
+It seems like this could be useful:
+https://aws.amazon.com/blogs/mobile/amplify-framework-local-mocking/
 ** Building a Build Pipeline to Deploy the Solution to AWS
+It seems likely that Amplify will help with this too.
 ** Choosing a Way to run and Access the GraphQL Endpoint
 FIXME: I have seen tutorials where people use different stacks of Python web frameworks, even on AWS Lambda. The aim here is to identify a sort of MVP for running this solution as I suspect there is no need for a web framework in the Serverless context. I will try to avoid bloat / unnecessary components, and just rely on things that are strictly needed for the API. 
 
 My current understanding is that ideally there is no need for any sort of web framework.
-*** Need for any Layer Above Appsync
-FIXME: AppSync seems to provide the GraphQL Endpoint as a managed service.
 
-So I guess the question is whether I need any additional functionality at all. Where do all the Schema / Query definitions go? Is it feasible to execute them directly from a web client (JavaScript) or do I need some kind of an additional layer for backend processing. Maybe Lambda. 
+Right now, I don't even know if Lambdas will be necessary. If they are, one possible way to enable interaction between Lambdas and Appsync is to use the boto3 client library. 
+
+However, it may be possible and feasible to access the GraphQL endpoint directly from a web client (JS code).
